@@ -1,0 +1,16 @@
+[Unit]
+Description=Python Dynamic DNS Updater
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=lee
+WorkingDirectory=/home/lee/dev/pyddns
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/lee/dev/pyddns/venv/bin/python /home/lee/dev/pyddns/ddns_updater.py
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
