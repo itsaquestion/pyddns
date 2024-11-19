@@ -6,7 +6,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone [repository-url]
+git clone git@github.com:itsaquestion/pyddns.git
 cd pyddns
 
 # 2. 创建虚拟环境
@@ -51,3 +51,4 @@ sudo systemctl status pyddns
 查看服务日志：
 ```bash
 sudo journalctl -u pyddns -f
+```
